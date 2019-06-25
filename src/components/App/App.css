@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round&display=swap);
+
+:root {
+    --main-color: #fe6996;
+    --text-color: #b3b3b3;
+    --text-color-light: #e4e4e4;
+    --border-color: #c7c7c7;
+    --bg-color: #ffeff3;
+    --neutral-color: #ffffff;
+    --bg-bg-color: #eeeeee;
+    --font: 'Varela Round'
+}
+
+.login{
+    text-align:center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.login h1{
+    font-family: 'Varela Round', sans-serif;
+    color: #7a7a7a;
+    font-size: 50px;
+}
+
+.icon{
+    font-family: 'Material Icons';
+    font-style:normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    vertical-align: top;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.bg{
+    position:absolute !important;
+}
+
+header{
+    display:block;
+    width:100%;
+    padding: 1.5em 0;
+    background: var(--neutral-color);
+    border-bottom: 1px solid var(--border-color);
+    height: 90px;
+}
+
+main{
+    display:block;
+    margin: 0 auto;
+    margin-top: 1em;
+    max-width:70em;
+}
+
+
+header #logo{
+    font-size: 45px;
+    color: var(--main-color);
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top:25px;
+}
+
+.logout{
+    position:absolute;
+    right:0px;
+    top:0px;
+    margin-right: 25px;
+    margin-top: 25px;
+} 
+
+.mainbg{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position:absolute;
+    background-color:var(--bg-bg-color);
+}
+
+#logoutbtn{
+    background-color: var(--bg-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 50px;
+    height: 35px;
+    font-size: 30px;
+}
+
+#logoutbtn:hover{
+    opacity: .7;
+}
