@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import dateFns from "date-fns";
 import Modal from 'react-modal';
 
@@ -31,7 +30,7 @@ class Calendar extends React.Component{
         return(
             <div className="header row flex-middle">
               <div className="col col-start">
-                <div className="icon" onClick={this.prevMonth}>
+                <div className="icon noselect" onClick={this.prevMonth}>
                   chevron_left
                 </div>
               </div>
@@ -41,7 +40,7 @@ class Calendar extends React.Component{
                 </span>
               </div>
               <div className="col col-end" onClick={this.nextMonth}>
-                <div className="icon">chevron_right</div>
+                <div className="icon noselect">chevron_right</div>
               </div>
             </div>
         );
@@ -119,8 +118,10 @@ class Calendar extends React.Component{
                 <Modal
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeDayModal}
+                    overlayClassName="overlay"
+                    className="daymodal"
                 > 
-
+                    <Day/>
                 </Modal>
                 <div className="calendar">
                     {this.renderHeader()}
