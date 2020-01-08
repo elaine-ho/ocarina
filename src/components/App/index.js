@@ -10,7 +10,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component{
   constructor(props) {
     super(props);
-    this.state = { isLoggedIn:true }
+    this.state = { isLoggedIn: false}
   }
 
   loginSuccess = (e) => {
