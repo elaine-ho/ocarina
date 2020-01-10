@@ -1,0 +1,31 @@
+#schedule-scrollable {
+    overflow-y: scroll;
+    max-height: calc(100vh - 300px);
+}
+
+.currentDay {
+    text-align:center;
+    color: var(--main-color);
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.day-header {
+    font-weight: bold;
+}
+
+#textarea-notes {
+    resize: none;
+}
+
+.time-picker {
+    display: flex;
+}
+
+.dropdown li > span {
+    font-size: 10px;
+ }
+
+ #to {
+     padding:20px;
+ }
