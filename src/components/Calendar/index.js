@@ -13,12 +13,13 @@ class Calendar extends React.Component{
         this.state={
             currentMonth: new Date(),
             currentDate: new Date(),
-            modalIsOpen: false
+            modalIsOpen: false,
+            modalDate: 0
         };
     }
 
-    openDayModal=()=>{
-        this.setState({modalIsOpen:true});
+    openDayModal(e){
+        this.setState({modalIsOpen:true, modalDate:e.target.dataset.day});
     }
 
     closeDayModal=()=>{
@@ -83,7 +84,8 @@ class Calendar extends React.Component{
                             : ""
                         }`}
                         key={day}
-                        onClick={this.openDayModal}
+                        data-day = {day}
+                        onClick={this.openDayModal.bind(this)}
                     >
                         <span className="number">{formattedDate}</span>
                     </div>
@@ -121,7 +123,7 @@ class Calendar extends React.Component{
                     overlayClassName="overlay"
                     className="daymodal"
                 > 
-                    <Day/>
+                    <Day modalDate={this.state.modalDate}/>
                 </Modal>
                 <div className="calendar">
                     {this.renderHeader()}
